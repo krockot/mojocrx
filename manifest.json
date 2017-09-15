@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "mojocrx",
+  "version": "0.0.42.1",
+  "description": "Understandification",
+  "content_scripts": [
+    {
+      "matches": ["https://chromium-review.googlesource.com/c/*"],
+      "css": ["style.css"],
+      "js": [
+        "peg-0.10.0.min.js",
+        "catalog-metadata.js",
+        "cytoscape.min.js",
+        "review-helper.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "https://cs.chromium.org/*",
+    "https://oz.gs/*",
+    "storage"
+  ],
+  "options_page": "options.html"
+}
